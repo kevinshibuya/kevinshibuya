@@ -1,16 +1,25 @@
-## Hi there 👋
+# Kevin Shibuya
 
-<!--
-**kevinshibuya/kevinshibuya** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+### Senior Front-End Engineer · React / TypeScript
 
-Here are some ideas to get you started:
+Building high-traffic interactive products, data visualizations, and applied-AI tools.
+At **Grupo RBS** (Brazil's largest regional media group) my work won the **Prêmio RBS**
+and reaches millions of readers.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+🌐 [kevinshibuya.com](https://kevinshibuya.com) · 💼 [LinkedIn](https://linkedin.com/in/kevin-shibuya) · ✉️
+hello@kevinshibuya.com
+📍 Porto Alegre, Brazil — open to **remote & relocation** · 🗣️ English (C1) / Portuguese (native)
+
+**Stack:** React · TypeScript · Next.js · Angular · Node.js · D3.js · GSAP · Three.js · Firebase · GCP/BigQuery
+
+### Selected work
+
+| Project                    | What it is                             | Impact                           |
+| -------------------------- | -------------------------------------- | -------------------------------- |
+| **Painel da Reconstrução** | Live flood-recovery spending dashboard | R$129B tracked · Prêmio RBS      |
+| **Chat da Hora**           | 3-agent LLM analyst over BigQuery      | secured external investment      |
+| **Enquetes GZH**           | Real-time newsroom poll platform       | 760k+ votes · replaced paid SaaS |
+| **Política Essencial**     | High-converting course landing         | 97% good LCP                     |
+
+> Most production code lives in private/work repos — these are case studies (architecture + results). Live demos on my
+> [portfolio](https://kevinshibuya.com).
