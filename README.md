@@ -4,7 +4,7 @@ I build interactive products for the web and the tools around them. nearly seven
 
 react · typescript · next.js · node.js · nestjs · postgres · d3 · gsap · three.js · firebase · gcp
 
-<h3><a id="now-building"><img src="assets/readme/heading-now-building-dark.svg#gh-dark-mode-only" width="1760" height="152" alt="now building"><img src="assets/readme/heading-now-building-light.svg#gh-light-mode-only" width="1760" height="152" alt="now building"></a></h3>
+<h3><a href="#gh-dark-mode-only"><img src="assets/readme/heading-now-building-dark.svg#gh-dark-mode-only" width="1760" height="152" alt="now building"></a><a href="#gh-light-mode-only"><img src="assets/readme/heading-now-building-light.svg#gh-light-mode-only" width="1760" height="152" alt="now building"></a></h3>
 
 everything here is work in progress. each line says how far along it is.
 
@@ -28,15 +28,15 @@ hyperliquid perps analysis with an alert engine that runs all day · fastify, re
 
 earlier stage: [harness-bench](https://github.com/kevinshibuya/harness-bench) · [brazil-elections-dataset-analysis](https://github.com/kevinshibuya/brazil-elections-dataset-analysis) · [oil-tracker](https://github.com/kevinshibuya/oil-tracker) · [claude-harness, a case study](https://github.com/kevinshibuya/claude-harness-case-study)
 
-<h3><a id="shipped"><img src="assets/readme/heading-shipped-dark.svg#gh-dark-mode-only" width="1760" height="152" alt="shipped"><img src="assets/readme/heading-shipped-light.svg#gh-light-mode-only" width="1760" height="152" alt="shipped"></a></h3>
+<h3><a href="#gh-dark-mode-only"><img src="assets/readme/heading-shipped-dark.svg#gh-dark-mode-only" width="1760" height="152" alt="shipped"></a><a href="#gh-light-mode-only"><img src="assets/readme/heading-shipped-light.svg#gh-light-mode-only" width="1760" height="152" alt="shipped"></a></h3>
 
 <a href="https://github.com/kevinshibuya/painel-da-reconstrucao-case-study#gh-dark-mode-only"><img src="assets/readme/row-painel-dark.svg#gh-dark-mode-only" width="1760" height="128" alt="01 painel da reconstrução"></a><a href="https://github.com/kevinshibuya/painel-da-reconstrucao-case-study#gh-light-mode-only"><img src="assets/readme/row-painel-light.svg#gh-light-mode-only" width="1760" height="128" alt="01 painel da reconstrução"></a><br>
 a live dashboard of r$ 129b in flood-recovery spending for rio grande do sul · grupo rbs · prêmio rbs de jornalismo
 
-<a id="enquetes-gzh"><img src="assets/readme/row-enquetes-dark.svg#gh-dark-mode-only" width="1760" height="128" alt="02 enquetes gzh"><img src="assets/readme/row-enquetes-light.svg#gh-light-mode-only" width="1760" height="128" alt="02 enquetes gzh"></a><br>
+<a href="#gh-dark-mode-only"><img src="assets/readme/row-enquetes-dark.svg#gh-dark-mode-only" width="1760" height="128" alt="02 enquetes gzh"></a><a href="#gh-light-mode-only"><img src="assets/readme/row-enquetes-light.svg#gh-light-mode-only" width="1760" height="128" alt="02 enquetes gzh"></a><br>
 live polls for the newsroom, 760k votes across 71 polls · grupo rbs · replaced a paid service
 
-<a id="chat-da-hora"><img src="assets/readme/row-chat-da-hora-dark.svg#gh-dark-mode-only" width="1760" height="128" alt="03 chat da hora"><img src="assets/readme/row-chat-da-hora-light.svg#gh-light-mode-only" width="1760" height="128" alt="03 chat da hora"></a><br>
+<a href="#gh-dark-mode-only"><img src="assets/readme/row-chat-da-hora-dark.svg#gh-dark-mode-only" width="1760" height="128" alt="03 chat da hora"></a><a href="#gh-light-mode-only"><img src="assets/readme/row-chat-da-hora-light.svg#gh-light-mode-only" width="1760" height="128" alt="03 chat da hora"></a><br>
 natural-language analytics for the newsroom, three llm agents over bigquery · grupo rbs
 
 <a href="https://www.politicaessencial.com/#gh-dark-mode-only"><img src="assets/readme/row-politica-essencial-dark.svg#gh-dark-mode-only" width="1760" height="128" alt="04 política essencial"></a><a href="https://www.politicaessencial.com/#gh-light-mode-only"><img src="assets/readme/row-politica-essencial-light.svg#gh-light-mode-only" width="1760" height="128" alt="04 política essencial"></a><br>
@@ -44,7 +44,7 @@ the sales page for an online course, 97% good lcp · freelance
 
 I was at grupo rbs from november 2023 to july 2026. that code is private, so the case study shows the architecture.
 
-<h3><a id="contact"><img src="assets/readme/heading-contact-dark.svg#gh-dark-mode-only" width="1760" height="152" alt="got a project or rough idea? let's talk."><img src="assets/readme/heading-contact-light.svg#gh-light-mode-only" width="1760" height="152" alt="got a project or rough idea? let's talk."></a></h3>
+<h3><a href="#gh-dark-mode-only"><img src="assets/readme/heading-contact-dark.svg#gh-dark-mode-only" width="1760" height="152" alt="got a project or rough idea? let's talk."></a><a href="#gh-light-mode-only"><img src="assets/readme/heading-contact-light.svg#gh-light-mode-only" width="1760" height="152" alt="got a project or rough idea? let's talk."></a></h3>
 
 [hello@kevinshibuya.com](mailto:hello@kevinshibuya.com) · [kevinshibuya.com](https://kevinshibuya.com) · [linkedin](https://linkedin.com/in/kevin-shibuya)
 
