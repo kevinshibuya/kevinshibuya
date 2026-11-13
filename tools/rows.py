@@ -33,7 +33,7 @@ ROWS = {
         ('painel', 'painel da reconstrução', True),
         ('enquetes', 'enquetes gzh', False),
         ('chat-da-hora', 'chat da hora', False),
-        ('politica-essencial', 'política essencial', False),
+        ('politica-essencial', 'política essencial', True),
     ],
 }
 HEADINGS = [
