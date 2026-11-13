@@ -9,7 +9,7 @@ react · typescript · next.js · node.js · nestjs · postgres · d3 · gsap ·
 everything here is work in progress. each line says how far along it is.
 
 <a href="https://github.com/kevinshibuya/promptfall"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/row-promptfall-dark.svg"><img src="assets/readme/row-promptfall-light.svg" width="100%" alt="01 promptfall"></picture></a><br>
-an idle rpg that plays inside claude code while claude works · typescript, sqlite · soft launch, live server
+an idle rpg that plays inside claude code while claude works · typescript, sqlite · playable offline, public server not up yet
 
 <a href="https://github.com/kevinshibuya/forge"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/row-forge-dark.svg"><img src="assets/readme/row-forge-light.svg" width="100%" alt="02 forge"></picture></a><br>
 drafts, schedules and measures linkedin posts, and a person approves each one · nestjs, postgres · in progress
