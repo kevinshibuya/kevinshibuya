@@ -1,0 +1,134 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+  @font-face {
+    font-family: 'PJS';
+    src: url('../../assets/fonts/PlusJakartaSans-subset.woff2') format('woff2');
+    font-weight: 200 800;
+  }
+  html, body { margin: 0; background: #0d1117; }
+  #stage { position: relative; width: 1280px; height: 440px; overflow: hidden; }
+  #out { position: absolute; inset: 0; width: 1280px; height: 440px; }
+  #txt {
+    position: absolute; left: 70px; bottom: 56px;
+    display: flex; flex-direction: column; gap: 18px;
+    font-family: 'PJS', sans-serif; color: #F5F2EC; text-transform: lowercase;
+  }
+  #role { font-size: 24px; font-weight: 500; letter-spacing: -0.01em; }
+  #name { font-size: 132px; font-weight: 700; line-height: 0.92; letter-spacing: -0.03em; }
+  #name span { display: block; }
+  body.notext #txt { display: none; }
+</style>
+<div id="stage">
+  <canvas id="out"></canvas>
+  <div id="txt">
+    <div id="role">software engineer · full-stack</div>
+    <div id="name"><span>kevin</span><span>shibuya.</span></div>
+  </div>
+</div>
+<script>
+// Fragment shader copied from portfolio src/components/canvas/FluidWaves.tsx.
+// Only change: the dissolve target is a uniform (pageCol) instead of fixed cream.
+const VS = `attribute vec2 position; varying vec2 vUv;
+void main(){ vUv = position*0.5+0.5; gl_Position = vec4(position,0.0,1.0); }`;
+const FS = `precision highp float;
+uniform vec2 resolution; uniform float time; uniform float seed;
+uniform vec3 colour_1; uniform vec3 colour_2; uniform vec3 colour_3;
+uniform float contrast; uniform float dissolveStart; uniform float dissolveStrength;
+uniform vec3 pageCol; uniform vec2 fingers; uniform float thinAmt;
+varying vec2 vUv;
+float hash(vec2 p){ return fract(sin(dot(p, vec2(127.1,311.7)))*43758.5453); }
+float vnoise(vec2 p){ vec2 i=floor(p), f=fract(p); vec2 u=f*f*(3.0-2.0*f);
+  return mix(mix(hash(i),hash(i+vec2(1.0,0.0)),u.x), mix(hash(i+vec2(0.0,1.0)),hash(i+vec2(1.0,1.0)),u.x), u.y); }
+float fbm(vec2 p){ float v=0.0, a=0.5; for(int i=0;i<4;i++){ v+=a*vnoise(p); p=p*2.0+3.1; a*=0.5; } return v; }
+vec4 effect(vec2 screenSize, vec2 screen_coords){
+  vec2 uv = (screen_coords.xy - 0.5*screenSize.xy)/length(screenSize.xy);
+  uv *= 30.0;
+  float speed = time * 0.35;
+  uv += 1.2*vec2(sin(uv.y*0.22 + speed*0.32 + seed*6.2831), cos(uv.x*0.41 - speed*0.24 + seed*12.566));
+  vec2 uv2 = vec2(uv.x+uv.y);
+  for(int i=0;i<5;i++){
+    uv2 += sin(max(uv.x,uv.y)) + uv;
+    uv += 0.5*vec2(cos(5.1123314 + 0.353*uv2.y + speed*0.131121), sin(uv2.x - 0.113*speed));
+    uv -= 1.0*cos(uv.x+uv.y) - 1.0*sin(uv.x*0.711 - uv.y);
+  }
+  float contrast_mod = (0.25*contrast + 1.38);
+  float paint_res = min(2.0, max(0.0, length(uv)*0.035*contrast_mod));
+  float c1p = max(0.0, 1.0 - contrast_mod*abs(1.0-paint_res));
+  float c2p = max(0.0, 1.0 - contrast_mod*abs(paint_res));
+  float c3p = 1.0 - min(1.0, c1p+c2p);
+  vec3 ret_col = (0.3/contrast)*colour_1 + (1.0-0.3/contrast)*(colour_1*c1p + colour_2*c2p + colour_3*c3p);
+  if (dissolveStrength > 0.0) {
+    float p = 1.0 - vUv.y/max(dissolveStart, 1e-4);
+    float diss = 0.0; float thin = 0.0;
+    if (p > -0.6) {
+      float n = fbm(vec2(vUv.x*fingers.x, vUv.y*fingers.y) + uv*0.06 + vec2(seed*9.0, time*0.05));
+      float sweep = (fbm(vec2(vUv.x*1.3 + seed*3.0, time*0.03)) - 0.5)*0.55;
+      float amp = 0.90*(1.0 - smoothstep(0.55, 1.0, p));
+      float field = p + (n - 0.5 + sweep)*amp;
+      diss = smoothstep(0.34, 0.60, field);
+      thin = smoothstep(0.24, 0.56, field);
+    }
+    float floorCream = 1.0 - smoothstep(0.035, 0.047, vUv.y);
+    diss = max(diss, floorCream)*dissolveStrength;
+    thin = max(thin, floorCream)*dissolveStrength;
+    float luma = dot(ret_col, vec3(0.299,0.587,0.114));
+    ret_col = mix(ret_col, vec3(luma), thin*thinAmt);
+    ret_col = mix(ret_col, pageCol, diss);
+  }
+  return vec4(ret_col, 1.0);
+}
+void main(){ gl_FragColor = effect(resolution, vUv*resolution); }`;
+
+const glc = document.createElement('canvas');
+const gl = glc.getContext('webgl', { preserveDrawingBuffer: true, antialias: false });
+function sh(type, src){ const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s);
+  if(!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s)); return s; }
+const prog = gl.createProgram();
+gl.attachShader(prog, sh(gl.VERTEX_SHADER, VS)); gl.attachShader(prog, sh(gl.FRAGMENT_SHADER, FS));
+gl.linkProgram(prog); gl.useProgram(prog);
+const buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+const loc = gl.getAttribLocation(prog, 'position'); gl.enableVertexAttribArray(loc);
+gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+const U = n => gl.getUniformLocation(prog, n);
+gl.uniform3fv(U('colour_1'), [0.902, 0.302, 0.4]);
+gl.uniform3fv(U('colour_2'), [0.302, 0.502, 0.902]);
+gl.uniform3fv(U('colour_3'), [0.902, 0.8, 0.302]);
+gl.uniform1f(U('contrast'), 2.0);
+
+const out = document.getElementById('out');
+const ctx = out.getContext('2d');
+let cfg = null;
+
+// cfg: {w,h,seed,t0,fps,frames,xfade,dissolveStart,page:[r,g,b]}
+window.setup = c => {
+  cfg = c;
+  glc.width = c.w; glc.height = c.h; out.width = c.w; out.height = c.h;
+  gl.viewport(0, 0, c.w, c.h);
+  gl.uniform2f(U('resolution'), c.w, c.h);
+  gl.uniform1f(U('seed'), c.seed);
+  gl.uniform1f(U('dissolveStart'), c.dissolveStart);
+  gl.uniform1f(U('dissolveStrength'), c.dissolveStart > 0 ? 1 : 0);
+  gl.uniform3fv(U('pageCol'), c.page);
+  gl.uniform2fv(U('fingers'), c.fingers ?? [5.0, 2.2]);
+  gl.uniform1f(U('thinAmt'), c.thinAmt ?? 0.45);
+  return true;
+};
+function draw(t){ gl.uniform1f(U('time'), t); gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4); }
+// Frame i of a seamless loop: the first `xfade` frames blend from the tail
+// that runs past the loop end back into the head.
+window.frame = i => {
+  const { t0, fps, frames, xfade } = cfg;
+  ctx.globalAlpha = 1;
+  draw(t0 + i / fps); ctx.drawImage(glc, 0, 0);
+  if (i < xfade) {
+    const w = 1 - i / xfade;            // tail weight: 1 at i=0, 0 at i=xfade
+    const s = w * w * (3 - 2 * w);
+    draw(t0 + (frames + i) / fps);
+    ctx.globalAlpha = s; ctx.drawImage(glc, 0, 0); ctx.globalAlpha = 1;
+  }
+  return true;
+};
+window.jpeg = q => out.toDataURL('image/jpeg', q);
+</script>
