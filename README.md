@@ -1,4 +1,4 @@
-<a href="https://kevinshibuya.com"><img src="assets/readme/hero.svg" width="2560" height="880" alt="kevin shibuya. software engineer, full-stack."></a>
+<a href="https://kevinshibuya.com"><img src="assets/readme/hero.svg" width="1920" height="660" alt="kevin shibuya. software engineer, full-stack."></a>
 
 I build interactive products for the web and the tools around them. nearly seven years of react and typescript in brazil, australia and the us, with node, nestjs and postgres behind them. these days most of my time goes into products built with ai agents, and into the gates that check what they write.
 
