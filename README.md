@@ -8,29 +8,29 @@ react · typescript · next.js · node.js · nestjs · postgres · d3 · gsap ·
 
 everything here is work in progress. each line says how far along it is.
 
-<a href="https://github.com/kevinshibuya/promptfall"><img src="assets/readme/row-promptfall-dark.svg#gh-dark-mode-only" width="100%" alt="01 promptfall"><img src="assets/readme/row-promptfall-light.svg#gh-light-mode-only" width="100%" alt="01 promptfall"></a><br>
+<a href="https://github.com/kevinshibuya/promptfall#gh-dark-mode-only"><img src="assets/readme/row-promptfall-dark.svg#gh-dark-mode-only" width="100%" alt="01 promptfall"></a><a href="https://github.com/kevinshibuya/promptfall#gh-light-mode-only"><img src="assets/readme/row-promptfall-light.svg#gh-light-mode-only" width="100%" alt="01 promptfall"></a><br>
 an idle rpg that plays inside claude code while claude works · typescript, sqlite · playable offline, public server not up yet
 
-<a href="https://github.com/kevinshibuya/forge"><img src="assets/readme/row-forge-dark.svg#gh-dark-mode-only" width="100%" alt="02 forge"><img src="assets/readme/row-forge-light.svg#gh-light-mode-only" width="100%" alt="02 forge"></a><br>
+<a href="https://github.com/kevinshibuya/forge#gh-dark-mode-only"><img src="assets/readme/row-forge-dark.svg#gh-dark-mode-only" width="100%" alt="02 forge"></a><a href="https://github.com/kevinshibuya/forge#gh-light-mode-only"><img src="assets/readme/row-forge-light.svg#gh-light-mode-only" width="100%" alt="02 forge"></a><br>
 drafts, schedules and measures linkedin posts, and a person approves each one · nestjs, postgres · in progress
 
-<a href="https://github.com/kevinshibuya/barber-app"><img src="assets/readme/row-barber-app-dark.svg#gh-dark-mode-only" width="100%" alt="03 barber-app"><img src="assets/readme/row-barber-app-light.svg#gh-light-mode-only" width="100%" alt="03 barber-app"></a><br>
+<a href="https://github.com/kevinshibuya/barber-app#gh-dark-mode-only"><img src="assets/readme/row-barber-app-dark.svg#gh-dark-mode-only" width="100%" alt="03 barber-app"></a><a href="https://github.com/kevinshibuya/barber-app#gh-light-mode-only"><img src="assets/readme/row-barber-app-light.svg#gh-light-mode-only" width="100%" alt="03 barber-app"></a><br>
 ai haircut previews for barbers, from one photo of the client · expo, nestjs, supabase · demo live, no store listing
 
-<a href="https://github.com/kevinshibuya/arena-ranking"><img src="assets/readme/row-arena-ranking-dark.svg#gh-dark-mode-only" width="100%" alt="04 arena-ranking"><img src="assets/readme/row-arena-ranking-light.svg#gh-light-mode-only" width="100%" alt="04 arena-ranking"></a><br>
+<a href="https://github.com/kevinshibuya/arena-ranking#gh-dark-mode-only"><img src="assets/readme/row-arena-ranking-dark.svg#gh-dark-mode-only" width="100%" alt="04 arena-ranking"></a><a href="https://github.com/kevinshibuya/arena-ranking#gh-light-mode-only"><img src="assets/readme/row-arena-ranking-light.svg#gh-light-mode-only" width="100%" alt="04 arena-ranking"></a><br>
 league of legends arena stats and a ladder for brazil · nestjs, next.js, bullmq · built, waiting on riot's production key
 
-<a href="https://github.com/kevinshibuya/job-form-filler"><img src="assets/readme/row-job-form-filler-dark.svg#gh-dark-mode-only" width="100%" alt="05 job-form-filler"><img src="assets/readme/row-job-form-filler-light.svg#gh-light-mode-only" width="100%" alt="05 job-form-filler"></a><br>
+<a href="https://github.com/kevinshibuya/job-form-filler#gh-dark-mode-only"><img src="assets/readme/row-job-form-filler-dark.svg#gh-dark-mode-only" width="100%" alt="05 job-form-filler"></a><a href="https://github.com/kevinshibuya/job-form-filler#gh-light-mode-only"><img src="assets/readme/row-job-form-filler-light.svg#gh-light-mode-only" width="100%" alt="05 job-form-filler"></a><br>
 a chrome extension that fills job applications and never submits one · mv3, sqlite, local only · in progress
 
-<a href="https://github.com/kevinshibuya/crypto-token-analysis"><img src="assets/readme/row-crypto-token-analysis-dark.svg#gh-dark-mode-only" width="100%" alt="06 crypto-token-analysis"><img src="assets/readme/row-crypto-token-analysis-light.svg#gh-light-mode-only" width="100%" alt="06 crypto-token-analysis"></a><br>
+<a href="https://github.com/kevinshibuya/crypto-token-analysis#gh-dark-mode-only"><img src="assets/readme/row-crypto-token-analysis-dark.svg#gh-dark-mode-only" width="100%" alt="06 crypto-token-analysis"></a><a href="https://github.com/kevinshibuya/crypto-token-analysis#gh-light-mode-only"><img src="assets/readme/row-crypto-token-analysis-light.svg#gh-light-mode-only" width="100%" alt="06 crypto-token-analysis"></a><br>
 hyperliquid perps analysis with an alert engine that runs all day · fastify, react · in progress
 
 earlier stage: [harness-bench](https://github.com/kevinshibuya/harness-bench) · [brazil-elections-dataset-analysis](https://github.com/kevinshibuya/brazil-elections-dataset-analysis) · [oil-tracker](https://github.com/kevinshibuya/oil-tracker) · [claude-harness, a case study](https://github.com/kevinshibuya/claude-harness-case-study)
 
 <h3><img src="assets/readme/heading-shipped-dark.svg#gh-dark-mode-only" width="100%" alt="shipped"><img src="assets/readme/heading-shipped-light.svg#gh-light-mode-only" width="100%" alt="shipped"></h3>
 
-<a href="https://github.com/kevinshibuya/painel-da-reconstrucao-case-study"><img src="assets/readme/row-painel-dark.svg#gh-dark-mode-only" width="100%" alt="01 painel da reconstrução"><img src="assets/readme/row-painel-light.svg#gh-light-mode-only" width="100%" alt="01 painel da reconstrução"></a><br>
+<a href="https://github.com/kevinshibuya/painel-da-reconstrucao-case-study#gh-dark-mode-only"><img src="assets/readme/row-painel-dark.svg#gh-dark-mode-only" width="100%" alt="01 painel da reconstrução"></a><a href="https://github.com/kevinshibuya/painel-da-reconstrucao-case-study#gh-light-mode-only"><img src="assets/readme/row-painel-light.svg#gh-light-mode-only" width="100%" alt="01 painel da reconstrução"></a><br>
 a live dashboard of r$ 129b in flood-recovery spending for rio grande do sul · grupo rbs · prêmio rbs de jornalismo
 
 <img src="assets/readme/row-enquetes-dark.svg#gh-dark-mode-only" width="100%" alt="02 enquetes gzh"><img src="assets/readme/row-enquetes-light.svg#gh-light-mode-only" width="100%" alt="02 enquetes gzh"><br>
