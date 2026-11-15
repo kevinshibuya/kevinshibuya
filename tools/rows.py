@@ -19,21 +19,24 @@ THEMES = {
 }
 EASE = 'cubic-bezier(.22,1,.36,1)'
 
-# (slug, title, has a link)
+# (slug, title, has a link). A title is the project's name as its owner writes it, capitals and all.
 ROWS = {
     'building': [
-        ('promptfall', 'promptfall', True),
-        ('forge', 'forge', True),
-        ('barber-app', 'barber-app', True),
-        ('arena-ranking', 'arena-ranking', True),
-        ('job-form-filler', 'job-form-filler', True),
-        ('crypto-token-analysis', 'crypto-token-analysis', True),
+        ('consilia-ia', 'Consilia IA', True),
+        ('promptfall', 'Promptfall', True),
+        ('job-form-filler', 'Job Form Filler', True),
+        ('barber-app', 'Barber App', True),
+        ('forge', 'Forge', True),
+        ('crypto-token-analysis', 'Crypto Token Analysis', True),
     ],
     'shipped': [
-        ('painel', 'painel da reconstrução', True),
-        ('enquetes', 'enquetes gzh', False),
-        ('chat-da-hora', 'chat da hora', False),
-        ('politica-essencial', 'política essencial', True),
+        ('radar-legislativo', 'Radar Legislativo', True),
+        ('enquetes', 'Enquetes GZH', True),
+        ('painel', 'Painel da Reconstrução', True),
+        ('politica-essencial', 'Política Essencial', True),
+        ('ia-na-redacao', 'IA na Redação', True),
+        ('fotos-do-ano-2024', 'Fotos do Ano 2024', True),
+        ('fotos-do-ano-2025', 'Fotos do Ano 2025', True),
     ],
 }
 HEADINGS = [
