@@ -6,14 +6,15 @@ N, fps = d['frames'], d['fps']
 L = N / fps                      # loop seconds
 slot = 100 / N                   # percent of the loop one frame owns
 font = base64.b64encode(open(FONT, 'rb').read()).decode()
-roles = ['software engineer · full-stack', 'react · typescript · node.js', 'ai engineer', 'system architect', 'tech lead']
-R = 5.0                          # seconds per role, as on the site
+# One role line, as on the site since version 4. More than one would rotate, R seconds each.
+roles = ['software engineer · full-stack']
+R = 5.0
 RT = R * len(roles)
 pc = lambda s: f'{100 * s / RT:.3f}%'
 EASE = 'cubic-bezier(.22,1,.36,1)'
 css = f'''
 @font-face{{font-family:PJS;src:url(data:font/woff2;base64,{font}) format('woff2');font-weight:200 800}}
-text{{font-family:PJS,system-ui,sans-serif;fill:#F5F2EC}}
+text{{font-family:PJS,system-ui,sans-serif;fill:#F9F4EC}}
 .f{{opacity:0;animation:f {L}s linear infinite}}
 .f0{{opacity:1;animation:f0 {L}s linear infinite}}
 .fc{{opacity:0;animation:fc {L}s linear infinite}}
@@ -29,7 +30,7 @@ text{{font-family:PJS,system-ui,sans-serif;fill:#F5F2EC}}
 o = [f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 440" width="1280" height="440" role="img" aria-labelledby="t">',
      '<title id="t">kevin shibuya. software engineer, full-stack.</title>', f'<style>{css}</style>',
      '<defs><clipPath id="m0"><rect x="0" y="93" width="1280" height="35"/></clipPath><clipPath id="m1"><rect x="0" y="141.1" width="1280" height="121.5"/></clipPath><clipPath id="m2"><rect x="0" y="262.6" width="1280" height="145.4"/></clipPath></defs>',
-     '<rect width="1280" height="440" fill="#E6996A"/>']
+     '<rect width="1280" height="440" fill="#D94300"/>']
 for i, j in enumerate(d['jpegs']):
     cls = 'f0' if i == 0 else 'f'
     delay = '' if i == 0 else f' style="animation-delay:{i / fps:.4f}s"'
@@ -37,7 +38,10 @@ for i, j in enumerate(d['jpegs']):
 o.append('<use class="fc" href="#p0" xlink:href="#p0"/>')   # wraps the last frame back into the first
 o.append('<g clip-path="url(#m0)"><g class="rise" style="--d:38px;animation-delay:.35s" font-size="24" font-weight="500" letter-spacing="-0.24">')
 for i, r in enumerate(roles):
-    o.append(f'<text class="role" style="animation-delay:{i * R}s" x="70" y="118.1">{r}</text>')
+    if len(roles) == 1:
+        o.append(f'<text x="70" y="118.1">{r}</text>')
+    else:
+        o.append(f'<text class="role" style="animation-delay:{i * R}s" x="70" y="118.1">{r}</text>')
 o.append('</g></g>')
 o.append('<g font-size="132" font-weight="700" letter-spacing="-3.96">'
          '<g clip-path="url(#m1)"><text class="rise" style="--d:152px;animation-delay:.43s" x="70" y="255.1">kevin</text></g>'
