@@ -1,8 +1,8 @@
 <a href="https://kevinshibuya.com"><img src="assets/readme/hero.svg" width="1920" height="660" alt="kevin shibuya. software engineer, full-stack."></a>
 
-I build interactive products for the web and the tools around them. nearly seven years of react and typescript in brazil, australia and the us, with node, nestjs and postgres behind them. these days most of my time goes into products built with ai agents, and into the gates that check what they write.
+I build interactive products for the web and the tools around them. seven years of react and typescript in brazil, australia and the us, with node, nestjs, .net and postgres behind them. these days most of my time goes into products built with ai agents, and into the gates that check what they write.
 
-react · typescript · next.js · node.js · nestjs · postgres · d3 · gsap · three.js · firebase · gcp
+react · typescript · next.js · node.js · nestjs · .net · postgres · d3 · firebase · gcp
 
 <h3><a href="#gh-dark-mode-only"><img src="assets/readme/heading-now-building-dark.svg#gh-dark-mode-only" width="1760" height="152" alt="now building"></a><a href="#gh-light-mode-only"><img src="assets/readme/heading-now-building-light.svg#gh-light-mode-only" width="1760" height="152" alt="now building"></a></h3>
 
